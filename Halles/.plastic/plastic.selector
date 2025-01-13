@@ -1,0 +1,3 @@
+repository "Halles@s501@cloud"
+  path "/"
+    smartbranch "/main/mae"
