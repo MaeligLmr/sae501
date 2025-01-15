@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/WebGL Scene.unity
     guid: a76eb5241c99ed64ba612c3dd7e67c10
   - enabled: 0
-    path: Assets/Samples/XR Interaction Toolkit/3.0.5/Starter Assets/DemoScene.unity
+    path: Assets/Samples/XR Interaction Toolkit/3.0.7/Starter Assets/DemoScene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
   m_configObjects:
     Unity.XR.PICO.LivePreview.Settings: {fileID: 11400000, guid: c8e043e4b01706a478c55854dfe2dbb6, type: 2}
