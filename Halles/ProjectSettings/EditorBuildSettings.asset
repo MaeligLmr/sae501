@@ -12,6 +12,7 @@ EditorBuildSettings:
     path: Assets/Samples/XR Interaction Toolkit/3.0.7/Starter Assets/DemoScene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6b96d1b6fd243bb43af808df7197468f, type: 2}
     Unity.XR.PICO.LivePreview.Settings: {fileID: 11400000, guid: c8e043e4b01706a478c55854dfe2dbb6, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 74aee5cc7a41e0940bd58ce06d2410fb, type: 2}
