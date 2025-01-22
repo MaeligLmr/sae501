@@ -18,6 +18,7 @@
     "com.unity.xr.interaction.toolkit": "3.0.7",
     "com.unity.xr.management": "4.5.0",
     "com.unity.xr.mock-hmd": "1.4.0-preview.2",
+    "com.unity.xr.oculus": "4.3.0",
     "com.unity.xr.openxr": "1.13.0",
     "com.unity.xr.openxr.picoxr": "file:C:/Users/antoi/Downloads/PICO Unity OpenXR Integration SDK-1.2.1_20240905",
     "com.unity.modules.accessibility": "1.0.0",
