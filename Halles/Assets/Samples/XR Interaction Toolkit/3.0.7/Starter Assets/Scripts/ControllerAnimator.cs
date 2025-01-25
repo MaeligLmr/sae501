@@ -1,3 +1,4 @@
+using System;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
@@ -32,6 +33,11 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [SerializeField]
         Transform m_GripTransform;
 
+        Material m_GripOriginalMaterial;
+
+        [SerializeField]
+        Material m_GripRequestedMaterial;
+
         [SerializeField]
         Vector2 m_GripRightRange = new Vector2(-0.0125f, -0.011f);
 
@@ -46,6 +52,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 Debug.LogWarning($"Controller Animator component missing references on {gameObject.name}", this);
                 return;
             }
+
+            m_GripOriginalMaterial = m_GripTransform.GetComponent<Renderer>().material;
 
             m_StickInput?.EnableDirectActionIfModeUsed();
             m_TriggerInput?.EnableDirectActionIfModeUsed();
@@ -75,8 +83,15 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             if (m_GripInput != null)
             {
+
                 var gripVal = m_GripInput.ReadValue();
                 var currentPos = m_GripTransform.localPosition;
+
+                if (gripVal > 0f)
+                    m_GripTransform.GetComponent<Renderer>().material = m_GripRequestedMaterial;
+                else
+                    m_GripTransform.GetComponent<Renderer>().material = m_GripOriginalMaterial;
+
                 m_GripTransform.localPosition = new Vector3(Mathf.Lerp(m_GripRightRange.x, m_GripRightRange.y, gripVal), currentPos.y, currentPos.z);
             }
         }
