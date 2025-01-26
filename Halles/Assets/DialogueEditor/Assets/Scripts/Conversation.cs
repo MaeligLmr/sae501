@@ -41,6 +41,7 @@ namespace DialogueEditor
             if (param != null)
             {
                 param.IntValue = value;
+                Debug.Log("Set Int: " + param.IntValue);
                 status = eParamStatus.OK;
             }
             else
@@ -68,6 +69,7 @@ namespace DialogueEditor
             IntParameter param = GetParameter(paramName) as IntParameter;
             if (param != null)
             {
+                Debug.Log("Get Int: " + param.IntValue);
                 status = eParamStatus.OK;
                 return param.IntValue;
             }

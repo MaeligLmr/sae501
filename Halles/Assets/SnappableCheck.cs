@@ -2,19 +2,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class SnappableCheck : MonoBehaviour
 {
-    public List<XRSocketInteractor> socketInteractors = new List<XRSocketInteractor>();
+    public GameObject socketInteractorsCollection;
     public GameObject ImagesCollection;
     public UnityEvent onAllObjectsCorrect;
     public UnityEvent onObjectsIncorrect;
+    
     private Dictionary<string, string> correctMappings;
+    private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor[] socketInteractors;
 
     void Start()
     {
-        // Define the correct mappings (socket name -> correct object name)
+        // Get all socket interactors from children
+        socketInteractors = socketInteractorsCollection.GetComponentsInChildren<UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor>();
+        
         correctMappings = new Dictionary<string, string>
         {
             { "Aimant", "Marchis" },
@@ -24,12 +27,15 @@ public class SnappableCheck : MonoBehaviour
             { "Aimant.005", "Halles centrales" },
             { "Aimant.006", "Halles Rondes" }
         };
-        foreach (XRSocketInteractor socket in socketInteractors)
+
+        // Add listeners to all socket interactors
+        foreach (UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket in socketInteractors)
         {
             socket.selectEntered.AddListener(OnObjectAttached);
             socket.selectExited.AddListener(onObjectDetached);
         }
     }
+
     bool AreAllItemsSnapped()
     {
         foreach (var socketInteractor in socketInteractors)
@@ -70,7 +76,7 @@ public class SnappableCheck : MonoBehaviour
     private bool CheckIfObjectsAreCorrect()
     {
         int countCorrect = 0;
-        foreach (XRSocketInteractor socket in socketInteractors)
+        foreach (UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket in socketInteractors)
         {
             if (socket.interactablesSelected.Count > 0)
             {
@@ -104,8 +110,6 @@ public class SnappableCheck : MonoBehaviour
                 Debug.LogWarning($"{socket.name} is empty, skipping correctness check.");
             }
         }
-        print(countCorrect);
-        print(socketInteractors.Count);
-        return countCorrect == socketInteractors.Count;
+        return countCorrect == socketInteractors.Length;
     }
 }

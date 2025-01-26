@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class changeState : MonoBehaviour
 {
-    public GameObject gameObject;
+    public GameObject targetGameObject;
     public bool isDisabled = false;
     
     void Start(){
@@ -13,7 +13,7 @@ public class changeState : MonoBehaviour
     public void makeDisappear()
     {
 
-        gameObject.SetActive(false);
+        targetGameObject.SetActive(false);
         isDisabled = true;
 
     }

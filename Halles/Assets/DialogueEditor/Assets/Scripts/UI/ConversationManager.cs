@@ -85,6 +85,7 @@ namespace DialogueEditor
         private List<UIConversationButton> m_uiOptions;
         private int m_currentSelectedIndex;
 
+        private Dictionary<NPCConversation, Conversation> m_deserializedConversations = new Dictionary<NPCConversation, Conversation>();
 
         //--------------------------------------
         // Awake, Start, Destroy, Update
@@ -149,13 +150,22 @@ namespace DialogueEditor
 
         public void StartConversation(NPCConversation conversation)
         {
-            m_conversation = conversation.Deserialize();
+            // Only deserialize if it's a different conversation
+            bool conversationExist = m_deserializedConversations.ContainsKey(conversation);
+            if (!conversationExist){
+                m_conversation = conversation.Deserialize();
+                m_deserializedConversations.Add(conversation, m_conversation);
+            } else {
+                m_conversation = m_deserializedConversations[conversation];
+            }
+
+
             if (OnConversationStarted != null)
                 OnConversationStarted.Invoke();
 
             TurnOnUI();
             m_currentSpeech = m_conversation.Root;
-            
+
             SetState(eState.TransitioningDialogueBoxOn);
         }
 
@@ -216,6 +226,7 @@ namespace DialogueEditor
         public void SetInt(string paramName, int value)
         {
             eParamStatus status;
+
             m_conversation.SetInt(paramName, value, out status);
 
             if (status == eParamStatus.NoParamFound)
@@ -239,7 +250,6 @@ namespace DialogueEditor
         {
             eParamStatus status;
             int value = m_conversation.GetInt(paramName, out status);
-
             if (status == eParamStatus.NoParamFound)
             {
                 LogWarning("parameter \'" + paramName + "\' does not exist.");
@@ -338,15 +348,24 @@ namespace DialogueEditor
                 return;
             }
 
+            if (m_currentSpeech.TimeUntilAdvance == 0f && m_currentSpeech.AutomaticallyAdvance)
+            {
+
+                SetupSpeech(GetValidSpeechOfNode(m_currentSpeech) ?? null);
+
+                return;
+            }
+
             SetColorAlpha(DialogueBackground, t);
             //SetColorAlpha(NpcIcon, t);
             SetColorAlpha(NameText, t);
+
         }
 
         private void ScrollingText_Update()
         {
             const float charactersPerSecond = 1500;
-            float timePerChar = (60.0f / charactersPerSecond);
+            float timePerChar = 60.0f / charactersPerSecond;
             timePerChar *= ScrollSpeed;
 
             m_elapsedScrollTime += Time.deltaTime;
@@ -414,6 +433,7 @@ namespace DialogueEditor
             m_stateTime += Time.deltaTime;
             float t = m_stateTime / TRANSITION_TIME;
 
+
             if (t > 1)
             {
                 ClearOptions();
@@ -438,6 +458,7 @@ namespace DialogueEditor
                 else
                 {
                     SetupSpeech(nextSpeech);
+
                 }
                 return;
             }
@@ -631,7 +652,6 @@ namespace DialogueEditor
             {
                 SpeechConnection connection = parentNode.Connections[i] as SpeechConnection;
                 bool conditionsMet = ConditionsMet(connection);
-
                 if (conditionsMet)
                 {
                     return connection.SpeechNode;
@@ -688,7 +708,7 @@ namespace DialogueEditor
             else
             {
                 bool notAutoAdvance = !m_currentSpeech.AutomaticallyAdvance;
-                bool allowVisibleOptionWithAuto = (m_currentSpeech.AutomaticallyAdvance && m_currentSpeech.AutoAdvanceShouldDisplayOption);
+                bool allowVisibleOptionWithAuto = m_currentSpeech.AutomaticallyAdvance && m_currentSpeech.AutoAdvanceShouldDisplayOption;
 
                 if (notAutoAdvance || allowVisibleOptionWithAuto)
                 {
@@ -790,19 +810,18 @@ namespace DialogueEditor
                     int requiredValue = condition.RequiredValue;
                     eParamStatus status;
                     int currentValue = m_conversation.GetInt(paramName, out status);
-
                     switch (condition.CheckType)
                     {
                         case IntCondition.eCheckType.equal:
-                            conditionMet = (currentValue == requiredValue);
+                            conditionMet = currentValue == requiredValue;
                             break;
 
                         case IntCondition.eCheckType.greaterThan:
-                            conditionMet = (currentValue > requiredValue);
+                            conditionMet = currentValue > requiredValue;
                             break;
 
                         case IntCondition.eCheckType.lessThan:
-                            conditionMet = (currentValue < requiredValue);
+                            conditionMet = currentValue < requiredValue;
                             break;
                     }
                 }
@@ -819,11 +838,11 @@ namespace DialogueEditor
                     switch (condition.CheckType)
                     {
                         case BoolCondition.eCheckType.equal:
-                            conditionMet = (currentValue == requiredValue);
+                            conditionMet = currentValue == requiredValue;
                             break;
 
                         case BoolCondition.eCheckType.notEqual:
-                            conditionMet = (currentValue != requiredValue);
+                            conditionMet = currentValue != requiredValue;
                             break;
                     }
                 }
