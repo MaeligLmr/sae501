@@ -22,6 +22,7 @@ namespace DialogueEditor
         SerializedProperty ScrollTextProperty;
         SerializedProperty ScrollTextSpeedProperty;
         SerializedProperty AllowMouseInteractionProperty;
+        SerializedProperty AudioSourceProperty; // Add this line
 
         private void OnEnable()
         {
@@ -32,6 +33,7 @@ namespace DialogueEditor
             ScrollTextProperty = serializedObject.FindProperty("ScrollText");
             ScrollTextSpeedProperty = serializedObject.FindProperty("ScrollSpeed");
             AllowMouseInteractionProperty = serializedObject.FindProperty("AllowMouseInteraction");
+            AudioSourceProperty = serializedObject.FindProperty("m_audioSource"); // Add this line
         }
 
         public override void OnInspectorGUI()
@@ -69,6 +71,11 @@ namespace DialogueEditor
             // Interaction options
             GUILayout.Label("Interaction options", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(AllowMouseInteractionProperty);
+
+            // Audio Source
+            GUILayout.Label("Audio Settings", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(AudioSourceProperty, new GUIContent("Audio Source"));
+            EditorGUILayout.Space();
 
             // Apply changes to the serializedProperty - always do this in the end of OnInspectorGUI.
             serializedObject.ApplyModifiedProperties();

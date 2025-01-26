@@ -55,7 +55,6 @@ namespace DialogueEditor
         public TMPro.TextMeshProUGUI NameText;
         public TMPro.TextMeshProUGUI DialogueText;
         // Components
-        public AudioSource AudioPlayer;
         // Prefabs
         public UIConversationButton ButtonPrefab;
         // Default values
@@ -86,6 +85,15 @@ namespace DialogueEditor
         private int m_currentSelectedIndex;
 
         private Dictionary<NPCConversation, Conversation> m_deserializedConversations = new Dictionary<NPCConversation, Conversation>();
+
+        // Replace the private field with a serializable field
+        [SerializeField]
+        private AudioSource m_audioSource;
+        public AudioSource AudioSource 
+        { 
+            get => m_audioSource;
+            set => m_audioSource = value;
+        }
 
         //--------------------------------------
         // Awake, Start, Destroy, Update
@@ -152,10 +160,13 @@ namespace DialogueEditor
         {
             // Only deserialize if it's a different conversation
             bool conversationExist = m_deserializedConversations.ContainsKey(conversation);
-            if (!conversationExist){
+            if (!conversationExist)
+            {
                 m_conversation = conversation.Deserialize();
                 m_deserializedConversations.Add(conversation, m_conversation);
-            } else {
+            }
+            else
+            {
                 m_conversation = m_deserializedConversations[conversation];
             }
 
@@ -409,13 +420,17 @@ namespace DialogueEditor
                 //custom
                 if (m_currentSpeech.WaitForAudioEnd)
                 {
-                    if (!AudioPlayer.isPlaying)
+                    if (m_audioSource != null && m_audioSource.isPlaying)
                     {
-                        if (m_stateTime > m_currentSpeech.TimeUntilAdvance)
-                        {
-                            SetState(eState.TransitioningOptionsOff);
-                        }
+                        return;
                     }
+
+                    if (m_stateTime > m_currentSpeech.TimeUntilAdvance)
+                    {
+                        SetState(eState.TransitioningOptionsOff);
+                    }
+
+
                 }
                 //end custom
                 if (m_currentSpeech.ConnectionType == Connection.eConnectionType.None || m_currentSpeech.ConnectionType == Connection.eConnectionType.Speech)
@@ -570,12 +585,12 @@ namespace DialogueEditor
 
             DoParamAction(speech);
 
-            // Play the audio
-            if (speech.Audio != null)
+            // Modified audio playback logic
+            if (speech.Audio != null && m_audioSource != null)
             {
-                AudioPlayer.clip = speech.Audio;
-                AudioPlayer.volume = speech.Volume;
-                AudioPlayer.Play();
+                m_audioSource.clip = speech.Audio;
+                m_audioSource.volume = speech.Volume;
+                m_audioSource.Play();
             }
 
             if (ScrollText)
