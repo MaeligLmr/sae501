@@ -1215,19 +1215,11 @@ namespace DialogueEditor
         {
             if (uiNodes != null)
             {
-                bool needsSave = false;
                 for (int i = 0; i < uiNodes.Count; i++)
                 {
                     bool guiChanged = uiNodes[i].ProcessEvents(e, inPanel);
                     if (guiChanged)
-                    {
                         GUI.changed = true;
-                        needsSave = true;
-                    }
-                }
-                if (needsSave)
-                {
-                    AutoSave();
                 }
             }
         }
@@ -1260,7 +1252,6 @@ namespace DialogueEditor
             }
 
             GUI.changed = true;
-            AutoSave();
         }
 
 
@@ -1569,59 +1560,44 @@ namespace DialogueEditor
 
             if (CurrentAsset != null)
             {
-                // Mark the asset as dirty to ensure Unity knows it needs to be saved
-                EditorUtility.SetDirty(CurrentAsset);
-
                 EditableConversation conversation = new EditableConversation();
 
                 // Prepare each node for serialization
-                foreach (var node in uiNodes)
+                for (int i = 0; i < uiNodes.Count; i++)
                 {
-                    node.Info.SerializeAssetData(CurrentAsset);
+                    uiNodes[i].Info.SerializeAssetData(CurrentAsset);
                 }
 
-                // Register UIDs and add to conversation
-                foreach (var node in uiNodes)
+                // Now that each node has been prepared for serialization: 
+                // - Register the UIDs of their parents/children
+                // - Add it to the conversation
+                for (int i = 0; i < uiNodes.Count; i++)
                 {
-                    node.Info.RegisterUIDs();
+                    uiNodes[i].Info.RegisterUIDs();
 
-                    if (node is UISpeechNode speechNode)
+                    if (uiNodes[i] is UISpeechNode)
                     {
-                        conversation.SpeechNodes.Add(speechNode.SpeechNode);
+                        conversation.SpeechNodes.Add((uiNodes[i] as UISpeechNode).SpeechNode);
                     }
-                    else if (node is UIOptionNode optionNode)
+                    else if (uiNodes[i] is UIOptionNode)
                     {
-                        conversation.Options.Add(optionNode.OptionNode);
+                        conversation.Options.Add((uiNodes[i] as UIOptionNode).OptionNode);
                     }
                 }
 
                 // Serialize
                 CurrentAsset.Serialize(conversation);
 
-                // Force Unity to save the asset to disk
-                AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
-
-                // Only clear references if this wasn't a manual save
+                // Null / clear everything. We aren't pointing to it anymore. 
                 if (!manual)
                 {
                     CurrentAsset = null;
-                    uiNodes.Clear();
+                    while (uiNodes.Count != 0)
+                        uiNodes.RemoveAt(0);
                     CurrentlySelectedObject = null;
                 }
 
                 MarkSceneDirty();
-                
-                Log("Conversation saved successfully.");
-            }
-        }
-
-        // Add automatic save on certain operations
-        private void AutoSave()
-        {
-            if (!Application.isPlaying && CurrentAsset != null)
-            {
-                Save(true);
             }
         }
     }
