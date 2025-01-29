@@ -1,29 +1,52 @@
+using DialogueEditor;
 using UnityEngine;
 
 public class tell : MonoBehaviour
 {
+
+    public NPCConversation conversation;
+
+
+    public void Start(){
+        launchNpcConversation();
+    }
+    private void setConversation(int value){
+        
+        ConversationManager.Instance.SetInt("Conversation",value);
+    }
+    private void launchNpcConversation(){
+        ConversationManager.Instance.StartConversation(conversation);
+    }
     public void firtItemPicked(){
-        Debug.Log("Ho... attends... Je crois que je sens un petit courant d'air... Oui ! Ça marche, tu as fais bouger quelque chose !");
+        setConversation(1);
+        launchNpcConversation();
     }
     public void tellNoItemPicked20sec(){
-        Debug.Log("Tu as la possibilité de bouger ou appuyer quelque chose ?");
+        setConversation(6);
+        launchNpcConversation();
     }
     public void tellNoItemPicked40sec(){
-        Debug.Log("Dans ce genre de situation généralement c'est une maquette où tu dois pouvoir interagir avec des éléments");
+        setConversation(7);
+        launchNpcConversation();
     }
     public void ouverturePicked(){
-        Debug.Log("Ah nous y voyons enfin quelque chose !");
+        setConversation(2);
+        launchNpcConversation();
     }
     public void fiveItemsPicked(){
-        Debug.Log("Oh ! C'est parfait ! C'est de mieux en mieux !");
+        setConversation(3);
+        launchNpcConversation();
     }
     public void thirteenItemPickedNoOuverture(){
-        Debug.Log("« C'est pas mal mais ça manque encore un peu de lumière");
+        setConversation(5);
+        launchNpcConversation();
     }
     public void finish(){
-        Debug.Log("Merci en tout cas c'est vraiment mieux comme ça");
+        setConversation(8);
+        launchNpcConversation();
     }
     public void elevenItemPicked(){
-        Debug.Log("On y est presque ! Il en reste plus que 3 !");
+        setConversation(4);
+        launchNpcConversation();
     }
 }

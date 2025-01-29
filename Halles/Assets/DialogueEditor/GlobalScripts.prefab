@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 460056741545350720}
   - component: {fileID: 6308569415404069960}
+  - component: {fileID: 8016532141503278618}
+  - component: {fileID: 8585788283570832946}
   m_Layer: 0
   m_Name: GlobalScripts
   m_TagString: Untagged
@@ -45,4 +47,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation: {fileID: 0}
-  launchOnStart: 0
+  launchOnStart: 1
+--- !u!114 &8016532141503278618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6366386615722816696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f64a8dd6c45980479ed999b6d99ba12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!114 &8585788283570832946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6366386615722816696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281ce751283041c478f62280d90b6332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketInteractorsCollection: {fileID: 0}
+  ImagesCollection: {fileID: 0}
+  onAllObjectsCorrect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8016532141503278618}
+        m_TargetAssemblyTypeName: PlayAnimation, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: OpenDoor
+          m_BoolArgument: 0
+        m_CallState: 2
+  onObjectsIncorrect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6308569415404069960}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
