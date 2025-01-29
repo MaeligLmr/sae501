@@ -5,7 +5,6 @@ using TMPro;
 public class CodeValidator : MonoBehaviour
 {
     public LetterChanger[] letterChangers; 
-    public TMP_Text resultText; 
     public UnityEvent incorrectCodeEvenEvent;
     public UnityEvent incorrectCodeOddEvent;
     public UnityEvent correctCodeEvent;
