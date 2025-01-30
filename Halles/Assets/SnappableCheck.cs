@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class SnappableCheck : MonoBehaviour
 {
@@ -60,6 +61,9 @@ public class SnappableCheck : MonoBehaviour
 
     void OnObjectAttached(SelectEnterEventArgs args)
     {
+        // Check if the attached object is in the correct spot
+        CheckIfObjectIsCorrect(args.interactableObject.transform.gameObject);
+        
         if (AreAllItemsSnapped())
         {
             bool allCorrect = CheckIfObjectsAreCorrect();
@@ -73,6 +77,37 @@ public class SnappableCheck : MonoBehaviour
             }
         }
     }
+
+    private void CheckIfObjectIsCorrect(GameObject attachedObject)
+    {
+        foreach (UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket in socketInteractors)
+        {
+            if (socket.hasSelection && socket.interactablesSelected.Contains(attachedObject.GetComponent<XRBaseInteractable>()))
+            {
+                if (correctMappings.TryGetValue(socket.name, out string correctObjectName))
+                {
+                    if (attachedObject.name == correctObjectName)
+                    {
+                        attachedObject.GetComponent<Outline>().OutlineColor = Color.green;
+                        attachedObject.GetComponent<Outline>().OutlineWidth = 6;
+                        Debug.Log($"{socket.name} has the correct object ({attachedObject.name}).");
+                    }
+                    else
+                    {
+                        attachedObject.GetComponent<Outline>().OutlineColor = Color.red;
+                        attachedObject.GetComponent<Outline>().OutlineWidth = 6;
+                        Debug.LogWarning($"{socket.name} has the incorrect object ({attachedObject.name}). Expected: {correctObjectName}.");
+                    }
+                }
+                else
+                {
+                    Debug.LogError($"No correct mapping found for socket {socket.name}.");
+                }
+                break;
+            }
+        }
+    }
+
     private bool CheckIfObjectsAreCorrect()
     {
         int countCorrect = 0;
@@ -88,26 +123,9 @@ public class SnappableCheck : MonoBehaviour
                 {
                     if (attachedObject.name == correctObjectName)
                     {
-                        attachedObject.GetComponent<Outline>().OutlineColor = Color.green;
-                        attachedObject.GetComponent<Outline>().OutlineWidth = 6;
                         countCorrect++;
-                        Debug.Log($"{socket.name} has the correct object ({attachedObject.name}).");
-                    }
-                    else
-                    {
-                        attachedObject.GetComponent<Outline>().OutlineColor = Color.red;
-                        attachedObject.GetComponent<Outline>().OutlineWidth = 6;
-                        Debug.LogWarning($"{socket.name} has the incorrect object ({attachedObject.name}). Expected: {correctObjectName}.");
                     }
                 }
-                else
-                {
-                    Debug.LogError($"No correct mapping found for socket {socket.name}.");
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"{socket.name} is empty, skipping correctness check.");
             }
         }
         return countCorrect == socketInteractors.Length;

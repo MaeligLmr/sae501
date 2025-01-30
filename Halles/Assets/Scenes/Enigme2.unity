@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 866002669}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -1606,51 +1606,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1 &866002668
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 866002670}
-  - component: {fileID: 866002669}
-  m_Layer: 0
-  m_Name: LevelLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &866002669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866002668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dec9695c6ea78cd458f31ceddf86fd1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 1
---- !u!4 &866002670
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866002668}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.844589, y: 2.0111678, z: 0.52172375}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890873023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,26 +1714,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 13
-  json: "{\"Conditions\":null,\"Options\":[],\"Parameters\":[{\"__type\":\"EditableIntParameter:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"IntValue\":0}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":2}],\"NodeUID\":1},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":3}],\"NodeUID\":2},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":4}],\"NodeUID\":3},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":8}],\"NodeUID\":4},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":1}],\"NodeUID\":5},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":7}],\"NodeUID\":6},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":6}],\"NodeUID\":7},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":5}],\"NodeUID\":8},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":229.300018,\"yPos\":1.20000744},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":null,\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0,\"WaitForAudioEnd\":false},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-269.9999,\"yPos\":276.8001},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah
-    nous y voyons enfin quelque chose !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":10.7998352,\"yPos\":244.000183},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
-    ! C\u2019est parfait ! C'est de mieux en mieux !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":140.400146,\"yPos\":328.80014},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"On
-    y est presque ! Il en reste plus que 3 !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":575.5995,\"yPos\":108.800041},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Merci
-    en tout cas c\u2019est vraiment mieux comme \xE7a\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-312.3999,\"yPos\":128.000092},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ho...
+  CurrentIDCounter: 16
+  json: "{\"Conditions\":null,\"Options\":[],\"Parameters\":[{\"__type\":\"EditableIntParameter:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"IntValue\":0}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":2}],\"NodeUID\":1},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":3}],\"NodeUID\":2},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":4}],\"NodeUID\":3},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":8}],\"NodeUID\":4},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":1}],\"NodeUID\":5},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":7}],\"NodeUID\":6},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Conversation\",\"CheckType\":0,\"RequiredValue\":5}],\"NodeUID\":8},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-99.5,\"yPos\":-456},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":null,\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0,\"WaitForAudioEnd\":false},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-598.7999,\"yPos\":-180.3999},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah
+    nous y voyons enfin quelque chose !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-318.000183,\"yPos\":-213.199829},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
+    ! C\u2019est parfait ! C'est de mieux en mieux !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-188.3999,\"yPos\":-128.399872},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"On
+    y est presque ! Il en reste plus que 3 !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":271.799438,\"yPos\":-468.399963},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Merci
+    en tout cas c\u2019est vraiment mieux comme \xE7a\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-641.199951,\"yPos\":-329.199921},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ho...
     attends... Je crois que je sens un petit courant d\u2019air... Oui ! \xC7a marche,
-    tu as fais bouger\\r\\nquelque chose !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":581.9995,\"yPos\":205.600128},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dans
+    tu as fais bouger quelque chose !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":298.199463,\"yPos\":-348.599884},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dans
     ce genre de situation g\xE9n\xE9ralement c'est une maquette o\xF9 tu dois pouvoir
-    interagir avec des \xE9l\xE9ments\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":339.599823,\"yPos\":186.400085},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
-    as la possibilit\xE9 de bouger ou appuyer quelque chose ?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":311.599823,\"yPos\":375.200073},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"C'est
-    pas mal mais \xE7a manque encore un peu de lumi\xE8re\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":612,\"yPos\":385.6001},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O\xF9
+    interagir avec des \xE9l\xE9ments\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":374.7998,\"yPos\":-115.999939},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"C'est
+    pas mal mais \xE7a manque encore un peu de lumi\xE8re\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":41.19995,\"yPos\":-84.5999146},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O\xF9
     est-ce que je viens d\u2019arriver encore ? C\u2019est l\u2019enfer cette salle.
-    C\u2019est super \xE9touffant et on voit rien en plus... Je crois que c\u2019est
-    vraiment pas normal l\xE0 !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":585.599854,\"yPos\":524.0001},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Excusez-moi,
-    qu\u2019est-ce qui se passe ici ? Pourquoi on \xE9touffe et nous n\u2019y\\r\\nvoyons
-    rien ?\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":604.7999,\"yPos\":672},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Comment
-    sont les lieux d\u2019habitude ?\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":620.800049,\"yPos\":810.4},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
+    C\u2019est super \xE9touffant et on voitrien en plus... Je crois que c\u2019est
+    vraiment pas normal l\xE0 !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":456.7998,\"yPos\":110.80011},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Excusez-moi,
+    qu\u2019est-ce qui se passe ici ? Pourquoi on \xE9touffe et nousn\u2019y voyons
+    rien ?\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":433.999878,\"yPos\":277.8},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Comment
+    sont les lieux d\u2019habitude ?\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":22,\"yPos\":154},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Les
+    grandes ouvertures sont toutes bouch\xE9es. D\u2019habitude, c\u2019est bienbien
+    diff\xE9rent !\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Dame\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-12,\"yPos\":412},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"On
+    a de la lumi\xE8re qui vient du plafond et l\u2019air passe par les grandesouvertures
+    \",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Dame\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":404,\"yPos\":518},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
     as entendu \xE7a ? Les a\xE9rations sont bizarrement bloqu\xE9es ! Tu as quoi
-    devant toi ? Tu penses pouvoir faire quelque chose ?\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true}]}"
+    devant toi ? Tu penses pouvoir faire quelque chose ?\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true}]}"
   saveVersion: 110
   DefaultName: Narrateur
   DefaultSprite: {fileID: 0}
@@ -1795,7 +1753,9 @@ MonoBehaviour:
   - {fileID: 1180713507}
   - {fileID: 1180713506}
   - {fileID: 1180713505}
-  - {fileID: 1180713504}
+  - {fileID: 1180713510}
+  - {fileID: 1180713509}
+  - {fileID: 1180713508}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
@@ -1821,7 +1781,9 @@ GameObject:
   - component: {fileID: 1180713507}
   - component: {fileID: 1180713506}
   - component: {fileID: 1180713505}
-  - component: {fileID: 1180713504}
+  - component: {fileID: 1180713510}
+  - component: {fileID: 1180713509}
+  - component: {fileID: 1180713508}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -1996,25 +1958,6 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 8300000, guid: d32a8711d9ee5104392529e7841361ff, type: 3}
---- !u!114 &1180713504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180713493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls: []
-  NodeID: 12
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ea4ebb316af61594d8887474df4597cc, type: 3}
 --- !u!114 &1180713505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2072,6 +2015,63 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 8300000, guid: 0cf4a8b3ff88d4a4da96c160ce6880c0, type: 3}
+--- !u!114 &1180713508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180713493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 15
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 8300000, guid: ea4ebb316af61594d8887474df4597cc, type: 3}
+--- !u!114 &1180713509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180713493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 14
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 0e74f38377b9e72429a3c3e0e82937af, type: 3}
+--- !u!114 &1180713510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180713493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 13
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 14e671f4161997c48912664fd17d23b5, type: 3}
 --- !u!1001 &1228858116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3765,8 +3765,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 76983430}
   - {fileID: 9178978540127301672}
+  - {fileID: 76983430}
   - {fileID: 1199050677154731671}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4153,6 +4153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &3635182752179522420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4464,6 +4465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &4285191881353085626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5030,6 +5032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &6090580261932082648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5239,6 +5242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &6903896664072979265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5426,6 +5430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &7406017475713762973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5576,6 +5581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!114 &7552495784175233679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5994,6 +6000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &7764506659629525166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6237,6 +6244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &8100596585867392127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6375,6 +6383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &8154607922124116270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6521,6 +6530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &8355937211738114683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6554,7 +6564,6 @@ GameObject:
   - component: {fileID: 955281430403465131}
   - component: {fileID: 2083235860737033596}
   - component: {fileID: 8365343243876098543}
-  - component: {fileID: 8365343243876098546}
   - component: {fileID: 8365343243876098545}
   - component: {fileID: 8365343243876098544}
   m_Layer: 0
@@ -6577,6 +6586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!114 &8365343243876098544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6625,18 +6635,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8365343243876098543}
-        m_TargetAssemblyTypeName: changeState, Assembly-CSharp
-        m_MethodName: makeDisappear
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1479714544}
         m_TargetAssemblyTypeName: globalScript, Assembly-CSharp
         m_MethodName: onEltPicked
@@ -6648,6 +6646,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 8365343243876098543}
+        m_TargetAssemblyTypeName: changeState, Assembly-CSharp
+        m_MethodName: changeMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 28e415550d9d83b4d81cdef512a79402, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
@@ -6694,28 +6704,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3952237, y: 1.160688, z: 0.43701577}
   m_Center: {x: -0.18054731, y: 0, z: 1.0810671}
---- !u!64 &8365343243876098546
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8365343243876098542}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4881414267085753726, guid: 9ef30e346401b4949b63b597a15a5bae, type: 3}
 --- !u!33 &8401952776436253454
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6975,6 +6963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &8721577593028126281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7165,6 +7154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &8875245011903088171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7316,6 +7306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
+  collider: {fileID: 0}
 --- !u!65 &8881787709943631063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7375,7 +7366,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 8
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -7432,7 +7423,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  rotationSpeed: 150
+  rotationSpeed: 230
   maxRotationAngle: 360
 --- !u!64 &9178978540127301674
 MeshCollider:
@@ -7517,4 +7508,3 @@ SceneRoots:
   - {fileID: 1595718335}
   - {fileID: 466009976}
   - {fileID: 1507642162}
-  - {fileID: 866002670}

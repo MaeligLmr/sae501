@@ -13,8 +13,8 @@ public class globalScript : MonoBehaviour
     public UnityEvent finish;
     public UnityEvent firstItemPicked;
 
-    private bool is20secChecked;
-    private bool is40secChecked;
+    private bool is60secChecked;
+    private bool is90secChecked;
 
     private bool isOuverturePicked;
     private int nbrPicked;
@@ -27,33 +27,33 @@ public class globalScript : MonoBehaviour
         // Initialisation des variables
         lastNbrPicked = nbrPicked; 
         timer = 0f;                
-        is20secChecked = false;
-        is40secChecked = false;
-        checkInterval = 20f; // Initialisez avec 20 secondes
+        is60secChecked = false;
+        is90secChecked = false;
+        checkInterval = 0f; // Initialisez avec 60 secondes
     }
 
     void Update()
     {
         timer += Time.deltaTime; // Augmente le timer avec le temps écoulé
 
-        // Vérification à 20 secondes
-        if (timer >= 20f && !is20secChecked)
+        // Vérification à 60 secondes
+        if (timer >= 60f && !is60secChecked)
         {
             if (nbrPicked == 0)
             {
                 firstItemNotPicked20sec.Invoke(); // Invoquer l'événement
             }
-            is20secChecked = true; // Marquer comme vérifié
+            is60secChecked = true; // Marquer comme vérifié
         }
 
-        // Vérification à 40 secondes
-        if (timer >= 40f && !is40secChecked)
+        // Vérification à 90 secondes
+        if (timer >= 90f && !is90secChecked)
         {
             if (nbrPicked == 0)
             {
                 firstItemNotPicked40sec.Invoke(); // Invoquer l'événement
             }
-            is40secChecked = true; // Marquer comme vérifié
+            is90secChecked = true; // Marquer comme vérifié
         }
     }
 
@@ -62,8 +62,8 @@ public class globalScript : MonoBehaviour
         nbrPicked++; // Augmenter le compteur des objets ramassés
         lastNbrPicked = nbrPicked; // Mettre à jour le dernier nombre d'objets ramassés
         timer = 0f; // Réinitialiser le timer à chaque ramassage
-        is20secChecked = false; // Réinitialiser les vérifications
-        is40secChecked = false;
+        is60secChecked = false; // Réinitialiser les vérifications
+        is90secChecked = false;
 
         // Invoquer les événements en fonction de l'état
         if (nbrPicked == 1)

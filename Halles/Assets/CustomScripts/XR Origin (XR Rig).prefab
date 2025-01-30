@@ -1604,11 +1604,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_UIPressInput.m_InputActionReferenceValue
+      value: 
+      objectReference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
       propertyPath: m_ActivateInput.m_InputActionReferenceValue
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
       propertyPath: m_SelectInput.m_InputActionReferencePerformed
+      value: 
+      objectReference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_UIPressInput.m_InputActionReferencePerformed
       value: 
       objectReference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
@@ -1841,7 +1849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4704240698125147208, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
       propertyPath: m_text
-      value: Prender un objet
+      value: Prendre un objet
       objectReference: {fileID: 0}
     - target: {fileID: 4704240698125147208, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
       propertyPath: m_fontColor.b
@@ -1975,6 +1983,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4704240697808797655, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5864900885970066975}
+    - targetCorrespondingSourceObject: {fileID: 4704240697808797655, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6620425902270777433}
+    - targetCorrespondingSourceObject: {fileID: 4704240697808797655, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6532281834873094994}
     - targetCorrespondingSourceObject: {fileID: 540699126476666104, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6812021108750869138}
@@ -2067,11 +2081,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasImage: {fileID: 7562052908676788458}
-  textMeshPro: {fileID: 7562052908990649206}
   targetColor: {r: 0, g: 0.8171296, b: 1, a: 0.7490196}
-  sceneChangerLayerMask:
-    m_Bits: 4
   rayInteractor: {fileID: 4404805451449307685}
+--- !u!114 &6620425902270777433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562052908676788457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c5cc6d4e5a35941ae0f895eb88ad53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 7562052908990649206}
+  rayInteractor: {fileID: 4404805451449307685}
+  chosenText: "\xC9nigme suivante"
+  selectedLayerMask:
+    m_Bits: 4
+--- !u!114 &6532281834873094994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562052908676788457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c5cc6d4e5a35941ae0f895eb88ad53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 7562052908990649206}
+  rayInteractor: {fileID: 4404805451449307685}
+  chosenText: Tourner la maquette
+  selectedLayerMask:
+    m_Bits: 8
 --- !u!114 &7562052908676788458 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4704240697808797652, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
@@ -2537,11 +2582,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_UIPressInput.m_InputActionReferenceValue
+      value: 
+      objectReference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
       propertyPath: m_ActivateInput.m_InputActionReferenceValue
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
       propertyPath: m_SelectInput.m_InputActionReferencePerformed
+      value: 
+      objectReference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_UIPressInput.m_InputActionReferencePerformed
       value: 
       objectReference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
@@ -3056,7 +3109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4704240698125147208, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
       propertyPath: m_text
-      value: Prender un objet
+      value: Prendre un objet
       objectReference: {fileID: 0}
     - target: {fileID: 4704240698125147208, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
       propertyPath: m_fontColor.b
@@ -3194,6 +3247,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4704240697808797655, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4067949137053353661}
+    - targetCorrespondingSourceObject: {fileID: 4704240697808797655, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2913253303674705574}
+    - targetCorrespondingSourceObject: {fileID: 4704240697808797655, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6641876869788543540}
     - targetCorrespondingSourceObject: {fileID: 540699126476666104, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5227888132323867783}
@@ -3265,11 +3324,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasImage: {fileID: 4421048883533849974}
-  textMeshPro: {fileID: 4421048883217909482}
   targetColor: {r: 0, g: 0.8171296, b: 1, a: 0.7490196}
-  sceneChangerLayerMask:
-    m_Bits: 4
   rayInteractor: {fileID: 4976846031150489649}
+--- !u!114 &2913253303674705574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4421048883533849973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c5cc6d4e5a35941ae0f895eb88ad53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 4421048883217909482}
+  rayInteractor: {fileID: 4976846031150489649}
+  chosenText: "\xC9nigme suivante"
+  selectedLayerMask:
+    m_Bits: 4
+--- !u!114 &6641876869788543540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4421048883533849973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c5cc6d4e5a35941ae0f895eb88ad53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 4421048883217909482}
+  rayInteractor: {fileID: 4976846031150489649}
+  chosenText: Tourner la maquette
+  selectedLayerMask:
+    m_Bits: 8
 --- !u!114 &4421048883533849974 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4704240697808797652, guid: 97eed31f7da54684ba7311227d7cf295, type: 3}

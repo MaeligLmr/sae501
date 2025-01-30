@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Demarrage.unity
+    guid: 604163b03f33fb542b7a13026acd6d10
   - enabled: 1
     path: Assets/Scenes/Enigme1.unity
     guid: 2a0ca8c2452097d44922900a8ff8a245
@@ -14,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Enigme3.unity
     guid: 483e8ed75d605b544b84a6361647aa5b
+  - enabled: 1
+    path: Assets/Scenes/Fin.unity
+    guid: d9fd8eb90be54ef4eb2ccd807a4bb7fd
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6b96d1b6fd243bb43af808df7197468f, type: 2}
     Unity.XR.PICO.LivePreview.Settings: {fileID: 11400000, guid: c8e043e4b01706a478c55854dfe2dbb6, type: 2}
