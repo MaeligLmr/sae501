@@ -32,7 +32,8 @@ public class SceneChanger : MonoBehaviour
             fadeCanvas = canvasObj.AddComponent<Canvas>();
             fadeCanvas.renderMode = RenderMode.ScreenSpaceCamera;
             fadeCanvas.worldCamera = Camera.main;
-            fadeCanvas.planeDistance = 0.001f;
+            fadeCanvas.planeDistance = 0.1f;
+            fadeCanvas.sortingOrder = 1;
             DontDestroyOnLoad(fadeCanvas.gameObject);
             
             fadeImage = new GameObject("FadeImage").AddComponent<Image>();
