@@ -136,7 +136,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5529264
 Transform:
@@ -979,6 +979,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76148059}
   m_Mesh: {fileID: 4145171126322166737, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
+--- !u!114 &76148069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76148059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLaunch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &76311008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,6 +2136,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514619769}
   m_Mesh: {fileID: 1521248849261738467, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
+--- !u!114 &514619779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514619769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLaunch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &554038306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3101,6 +3179,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797358478}
   m_Mesh: {fileID: 8415165878899960065, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
+--- !u!114 &797358488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797358478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLaunch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &797566974 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6308569415404069960, guid: 2d4a2ba45ea6485428ede0df1374906e, type: 3}
@@ -3407,7 +3524,7 @@ MonoBehaviour:
   onLaunch:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1537756502}
+      - m_Target: {fileID: 1019582569}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -3987,6 +4104,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868068106}
   m_Mesh: {fileID: 3643674795587843096, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
+--- !u!114 &868068116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868068106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLaunch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &889211890
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,6 +4477,51 @@ Transform:
   - {fileID: 1207665437}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1019582567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019582568}
+  - component: {fileID: 1019582569}
+  m_Layer: 0
+  m_Name: LevelLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1019582568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019582567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 9.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1019582569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019582567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec9695c6ea78cd458f31ceddf86fd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 1
 --- !u!1001 &1197740022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5582,51 +5783,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533759284}
   m_Mesh: {fileID: 6288788694046906142, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
---- !u!1 &1537756501
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1537756503}
-  - component: {fileID: 1537756502}
-  m_Layer: 0
-  m_Name: TransitionScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1537756502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537756501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dec9695c6ea78cd458f31ceddf86fd1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 1
---- !u!4 &1537756503
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537756501}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8385577, y: 3.9634898, z: -1.0397284}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538461329
 GameObject:
   m_ObjectHideFlags: 0
@@ -6933,7 +7089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308569415404069960, guid: 2d4a2ba45ea6485428ede0df1374906e, type: 3}
       propertyPath: conversation.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6308569415404069960, guid: 2d4a2ba45ea6485428ede0df1374906e, type: 3}
       propertyPath: 'conversation.Array.data[0]'
@@ -8057,6 +8213,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970584240}
   m_Mesh: {fileID: -7067145521672688069, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
+--- !u!114 &1970584250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970584240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLaunch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1985397821
 GameObject:
   m_ObjectHideFlags: 0
@@ -9606,7 +9801,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1336307317}
-  - {fileID: 1537756503}
   - {fileID: 902298350333816685}
   - {fileID: 890873024}
   - {fileID: 1387249342}
@@ -9621,3 +9815,4 @@ SceneRoots:
   - {fileID: 1761735631}
   - {fileID: 841269236}
   - {fileID: 1862367390}
+  - {fileID: 1019582568}

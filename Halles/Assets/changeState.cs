@@ -8,6 +8,11 @@ public class changeState : MonoBehaviour
         transform.gameObject.SetActive(false);
         isDisabled = true;
     }
+    
+    public void changeMaterial(Material newMaterial)
+    {
+        transform.GetComponent<Renderer>().material = newMaterial;
+    }
 
 
 
