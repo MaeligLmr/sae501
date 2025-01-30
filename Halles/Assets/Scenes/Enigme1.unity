@@ -459,7 +459,6 @@ GameObject:
   - component: {fileID: 76148063}
   - component: {fileID: 76148062}
   - component: {fileID: 76148061}
-  - component: {fileID: 76148069}
   m_Layer: 0
   m_Name: "Halles l\xE9gumes"
   m_TagString: Untagged
@@ -758,13 +757,25 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 76148069}
-        m_TargetAssemblyTypeName: LaunchOnce, Assembly-CSharp
-        m_MethodName: launchOnce
-        m_Mode: 1
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -968,45 +979,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76148059}
   m_Mesh: {fileID: 4145171126322166737, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
---- !u!114 &76148069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76148059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onLaunch:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: setConversation
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: triggerConversation
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8975148445074550448}
-          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &76311008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +1577,6 @@ GameObject:
   - component: {fileID: 514619773}
   - component: {fileID: 514619772}
   - component: {fileID: 514619771}
-  - component: {fileID: 514619779}
   m_Layer: 0
   m_Name: "Halles \xE9glise"
   m_TagString: Untagged
@@ -1947,13 +1918,25 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 514619779}
-        m_TargetAssemblyTypeName: LaunchOnce, Assembly-CSharp
-        m_MethodName: launchOnce
-        m_Mode: 1
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2114,45 +2097,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514619769}
   m_Mesh: {fileID: 1521248849261738467, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
---- !u!114 &514619779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514619769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onLaunch:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: setConversation
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: triggerConversation
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8975148445074550448}
-          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &554038306
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,7 +2581,6 @@ GameObject:
   - component: {fileID: 797358482}
   - component: {fileID: 797358481}
   - component: {fileID: 797358480}
-  - component: {fileID: 797358488}
   m_Layer: 0
   m_Name: Halles centrales
   m_TagString: Untagged
@@ -2957,13 +2900,25 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 797358488}
-        m_TargetAssemblyTypeName: LaunchOnce, Assembly-CSharp
-        m_MethodName: launchOnce
-        m_Mode: 1
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3146,45 +3101,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797358478}
   m_Mesh: {fileID: 8415165878899960065, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
---- !u!114 &797358488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797358478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onLaunch:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: setConversation
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: triggerConversation
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8975148445074550448}
-          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &797566974 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6308569415404069960, guid: 2d4a2ba45ea6485428ede0df1374906e, type: 3}
@@ -3551,7 +3467,6 @@ GameObject:
   - component: {fileID: 868068110}
   - component: {fileID: 868068109}
   - component: {fileID: 868068108}
-  - component: {fileID: 868068116}
   m_Layer: 0
   m_Name: Halles Rondes
   m_TagString: Untagged
@@ -3893,13 +3808,25 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 868068116}
-        m_TargetAssemblyTypeName: LaunchOnce, Assembly-CSharp
-        m_MethodName: launchOnce
-        m_Mode: 1
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4060,45 +3987,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868068106}
   m_Mesh: {fileID: 3643674795587843096, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
---- !u!114 &868068116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 868068106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onLaunch:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: setConversation
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: triggerConversation
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8975148445074550448}
-          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &889211890
 GameObject:
   m_ObjectHideFlags: 0
@@ -7050,11 +6938,11 @@ PrefabInstance:
     - target: {fileID: 6308569415404069960, guid: 2d4a2ba45ea6485428ede0df1374906e, type: 3}
       propertyPath: 'conversation.Array.data[0]'
       value: 
-      objectReference: {fileID: 8975148445074550448}
+      objectReference: {fileID: 902934985}
     - target: {fileID: 6308569415404069960, guid: 2d4a2ba45ea6485428ede0df1374906e, type: 3}
       propertyPath: 'conversation.Array.data[1]'
       value: 
-      objectReference: {fileID: 8975148445074550448}
+      objectReference: {fileID: 902934985}
     - target: {fileID: 6366386615722816696, guid: 2d4a2ba45ea6485428ede0df1374906e, type: 3}
       propertyPath: m_Name
       value: GlobalScripts
@@ -7649,7 +7537,6 @@ GameObject:
   - component: {fileID: 1970584244}
   - component: {fileID: 1970584243}
   - component: {fileID: 1970584242}
-  - component: {fileID: 1970584250}
   m_Layer: 0
   m_Name: "Halles l\xE9gumes.001"
   m_TagString: Untagged
@@ -7991,13 +7878,25 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1970584250}
-        m_TargetAssemblyTypeName: LaunchOnce, Assembly-CSharp
-        m_MethodName: launchOnce
-        m_Mode: 1
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8158,45 +8057,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970584240}
   m_Mesh: {fileID: -7067145521672688069, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
---- !u!114 &1970584250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970584240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onLaunch:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: setConversation
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: triggerConversation
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8975148445074550448}
-          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1985397821
 GameObject:
   m_ObjectHideFlags: 0
@@ -8421,7 +8281,6 @@ GameObject:
   - component: {fileID: 2089784887}
   - component: {fileID: 2089784886}
   - component: {fileID: 2089784885}
-  - component: {fileID: 2089784893}
   m_Layer: 0
   m_Name: Marchis
   m_TagString: Untagged
@@ -8763,13 +8622,25 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2089784893}
-        m_TargetAssemblyTypeName: LaunchOnce, Assembly-CSharp
-        m_MethodName: launchOnce
-        m_Mode: 1
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: setConversation
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 797566974}
+        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
+        m_MethodName: triggerConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8975148445074550448}
+          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8930,45 +8801,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089784883}
   m_Mesh: {fileID: 3290039257359157672, guid: 13c884ff2a221924d87898bc9a36e796, type: 3}
---- !u!114 &2089784893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089784883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onLaunch:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: triggerConversation
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8975148445074550448}
-          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 797566974}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: setConversation
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &2138516970
 GameObject:
   m_ObjectHideFlags: 0
@@ -9705,30 +9537,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 8
-  json: "{\"Conditions\":null,\"Options\":[],\"Parameters\":[{\"__type\":\"EditableIntParameter:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"IntValue\":1}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":5}],\"NodeUID\":2},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":3}],\"NodeUID\":3},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":4}],\"NodeUID\":4},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":0}],\"NodeUID\":5},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":2}],\"NodeUID\":6},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":6}],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":204.1,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Grabed\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"ROOT\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0,\"WaitForAudioEnd\":false},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-45.40001,\"yPos\":369},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
+  json: "{\"Conditions\":null,\"Options\":[],\"Parameters\":[{\"__type\":\"EditableIntParameter:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"IntValue\":1}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":5}],\"NodeUID\":2},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":3}],\"NodeUID\":3},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":4}],\"NodeUID\":4},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":1}],\"NodeUID\":5},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":2}],\"NodeUID\":6},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"TimeGrabbed\",\"CheckType\":0,\"RequiredValue\":6}],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":96,\"yPos\":38.0000153},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Grabed\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"ROOT\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0,\"WaitForAudioEnd\":false},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-98.2998047,\"yPos\":370.60022},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
     connais peut-\xEAtre aujourd'hui le march\xE9 de la place des acacias ? Sais-tu,
     qu'avant de planter\\r\\ncette place avec des arbres, une halle avec une structure
     m\xE9tallique y a \xE9t\xE9 construite \xE0 la Belle\\r\\n\xC9poque ? Elle sera
-    finalement d\xE9truite entre les deux guerres mondiales.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-104.400009,\"yPos\":206.999985},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"La
+    finalement d\xE9truite entre les deux guerres mondiales.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-125.299744,\"yPos\":250.199722},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"La
     halle aux bl\xE9s ayant \xE9t\xE9 d\xE9truite pour agrandir la place de la Tr\xE9moille,
     il a fallu en construire\\r\\nune autre plus petite \xE0 l'\xE9poque de Napol\xE9on
     III, mais, cette fois-ci, enti\xE8rement en pierres. Et\\r\\npourtant, elle aussi
-    sera d\xE9truite 40 ans plus tard pour percer la rue Charles Landelle.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":536.099731,\"yPos\":197},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Vendre
+    sera d\xE9truite 40 ans plus tard pour percer la rue Charles Landelle.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":488.800171,\"yPos\":204.999756},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Vendre
     du poisson, cela peut parfois g\xEAner les riverains \xE0 cause de l'odeur !
     C'est pour cela qu\u2019au\\r\\n18e si\xE8cle, une halle servant de poissonnerie
     a \xE9t\xE9 construite en dehors des murs de la ville. De\\r\\nforme circulaire,
     elle \xE9tait positionn\xE9e pr\xE8s de la rivi\xE8re afin de pouvoir facilement
-    \xE9vacuer les\\r\\nd\xE9chets.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-164.899979,\"yPos\":82},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
+    \xE9vacuer les\\r\\nd\xE9chets.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-217.799622,\"yPos\":83.60002},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
     vois le point tout seul ? Le plus \xE9loign\xE9 des autres ? C'est le site de
     la premi\xE8re halle\\r\\nlavalloise qui date du Moyen-\xE2ge. Les Anglais l'ont
     d\xE9truite pendant la guerre de Cent ans.\\r\\nMaintenant, une rue de la ville
-    garde son souvenir. Elle \xE9voque le march\xE9 mais en vieux fran\xE7ais.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":505.099823,\"yPos\":93},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ensuite,
+    garde son souvenir. Elle \xE9voque le march\xE9 mais en vieux fran\xE7ais.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":453.000366,\"yPos\":95.40002},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ensuite,
     de nouvelles halles sont construites. Elles ont \xE9t\xE9 install\xE9es \xE0
     l'int\xE9rieur de la ville\\r\\nfortifi\xE9e pour \xEAtre mieux prot\xE9g\xE9es.
     Destin\xE9es \xE0 la vente des c\xE9r\xE9ales, des fruits ou des l\xE9gumes\\r\\nvenant
     de la campagne, elle pr\xE9sente la forme d'un vaste pr\xE9au couvert par une
     charpente en bois.\\r\\nBrrr ! Il devait faire bien froid l\xE0-dessous l'hiver
-    ! Et, pourtant, elle a exist\xE9 pendant 400 ans !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":461.099854,\"yPos\":338},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Observe
+    ! Et, pourtant, elle a exist\xE9 pendant 400 ans !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Narrateur\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":1,\"WaitForAudioEnd\":true},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":408.199951,\"yPos\":339.60022},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Observe
     bien la place du 11 novembre aujourd'hui. Parmi les b\xE2timents anciens qui
     s'y trouvent,\\r\\non distingue un monument qui a chang\xE9 de destination. Aujourd'hui
     restaurant et bureau de poste,\\r\\nc'\xE9tait autrefois la halle centrale o\xF9
