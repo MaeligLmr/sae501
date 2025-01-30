@@ -38,7 +38,7 @@ public class XRRotateOnOrigin : XRBaseInteractable
         {
             // Calculate rotation based on interactor movement
             Quaternion rotationDelta = currentInteractor.transform.rotation * Quaternion.Inverse(initialInteractorRotation);
-            float rotationAmount = Mathf.DeltaAngle(0, rotationDelta.eulerAngles.y) * rotationSpeed * Time.deltaTime;
+            float rotationAmount = -Mathf.DeltaAngle(0, rotationDelta.eulerAngles.y) * rotationSpeed * Time.deltaTime;
 
             // Apply rotation around Y axis only
             transform.Rotate(Vector3.forward, rotationAmount);

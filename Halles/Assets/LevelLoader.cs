@@ -32,7 +32,8 @@ public class SceneChanger : MonoBehaviour
             fadeCanvas = canvasObj.AddComponent<Canvas>();
             fadeCanvas.renderMode = RenderMode.ScreenSpaceCamera;
             fadeCanvas.worldCamera = Camera.main;
-            fadeCanvas.sortingOrder = 1000;
+            fadeCanvas.planeDistance = 0.1f;
+            fadeCanvas.sortingOrder = 1;
             DontDestroyOnLoad(fadeCanvas.gameObject);
             
             fadeImage = new GameObject("FadeImage").AddComponent<Image>();
@@ -53,9 +54,11 @@ public class SceneChanger : MonoBehaviour
     {
         yield return StartCoroutine(Fade(0f, 1f));
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-        yield return null;
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
 
         yield return StartCoroutine(Fade(1f, 0f));
     }

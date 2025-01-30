@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class TriggerConversation : MonoBehaviour
 {
     [SerializeField]
-    private NPCConversation conversation;
+    private List<NPCConversation> conversation;
     [SerializeField]
     bool launchOnStart = false;
 
@@ -16,7 +16,10 @@ public class TriggerConversation : MonoBehaviour
     {
         if (launchOnStart)
         {
-            triggerConversation(conversation);
+            foreach (NPCConversation conv in conversation)
+            {
+                triggerConversation(conv);
+            }
         }
     }
 
@@ -41,5 +44,12 @@ public class TriggerConversation : MonoBehaviour
         {
             conversationQueue.Enqueue(conv);
         }
+    }
+
+    public void setConversation(int value)
+    {
+
+        ConversationManager.Instance.SetInt("TimeGrabbed", value);
+
     }
 }

@@ -39,7 +39,7 @@ public class globalScript : MonoBehaviour
         // Vérification à 20 secondes
         if (timer >= 20f && !is20secChecked)
         {
-            if (nbrPicked == lastNbrPicked)
+            if (nbrPicked == 0)
             {
                 firstItemNotPicked20sec.Invoke(); // Invoquer l'événement
             }
@@ -49,7 +49,7 @@ public class globalScript : MonoBehaviour
         // Vérification à 40 secondes
         if (timer >= 40f && !is40secChecked)
         {
-            if (nbrPicked == lastNbrPicked)
+            if (nbrPicked == 0)
             {
                 firstItemNotPicked40sec.Invoke(); // Invoquer l'événement
             }
