@@ -1,8 +1,14 @@
 fileFormatVersion: 2
-guid: 226db29134e1f4942a06d2f0f7e17635
+<<<<<<<< HEAD:Halles/Assets/XR/Loaders/SimulationLoader.asset.meta
+guid: 1e31117d410a9714188d4772da1567ac
+NativeFormatImporter:
+========
+guid: 3c8f1bd881cc1834a8bb38e3c5d8a185
 folderAsset: yes
 DefaultImporter:
+>>>>>>>> b9a5543b9b9f8c31ad840a4c6aef36b0eb5f51a0:Halles/Assets/XR/UserSimulationSettings/Resources.meta
   externalObjects: {}
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

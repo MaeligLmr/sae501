@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 15211ed57d466b942950d9f1c798e451
+<<<<<<<< HEAD:Halles/Assets/XR/UserSimulationSettings/Resources.meta
+guid: 226db29134e1f4942a06d2f0f7e17635
+========
+guid: a7fc1e02bfeacf6419cc4508ac791b32
+>>>>>>>> b9a5543b9b9f8c31ad840a4c6aef36b0eb5f51a0:Halles/Assets/XR/UserSimulationSettings.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
