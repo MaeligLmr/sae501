@@ -28,10 +28,17 @@ namespace Unity.VRTemplate
         [Tooltip("Whether the associated tooltip and curve will be disabled on Start.")]
         bool m_TurnOffAtStart = true;
 
+        [SerializeField]
+        [Tooltip("The fade duration for showing and hiding the tooltip and curve.")]
+        float m_FadeDuration = 0.5f;
+
         bool m_Gazing = false;
 
         Coroutine m_StartCo;
         Coroutine m_EndCo;
+
+        CanvasGroup m_TooltipCanvasGroup;
+        CanvasGroup m_CurveCanvasGroup;
 
         void Start()
         {
@@ -41,12 +48,26 @@ namespace Unity.VRTemplate
                     m_LazyTooltip.SetParent(null);
             }
 
+            if (m_LazyTooltip != null)
+            {
+                m_TooltipCanvasGroup = m_LazyTooltip.gameObject.GetComponent<CanvasGroup>();
+                if (m_TooltipCanvasGroup == null)
+                    m_TooltipCanvasGroup = m_LazyTooltip.gameObject.AddComponent<CanvasGroup>();
+            }
+
+            if (m_Curve != null)
+            {
+                m_CurveCanvasGroup = m_Curve.GetComponent<CanvasGroup>();
+                if (m_CurveCanvasGroup == null)
+                    m_CurveCanvasGroup = m_Curve.AddComponent<CanvasGroup>();
+            }
+
             if (m_TurnOffAtStart)
             {
-                if (m_LazyTooltip != null)
-                    m_LazyTooltip.gameObject.SetActive(false);
-                if (m_Curve != null)
-                    m_Curve.SetActive(false);
+                if (m_TooltipCanvasGroup != null)
+                    m_TooltipCanvasGroup.alpha = 0f;
+                if (m_CurveCanvasGroup != null)
+                    m_CurveCanvasGroup.alpha = 0f;
             }
         }
 
@@ -86,32 +107,49 @@ namespace Unity.VRTemplate
 
         IEnumerator StartDelay()
         {
-            yield return new WaitForSeconds(m_DwellTime);
-            if (m_Gazing)
-                TurnOnStuff();
+            yield return FadeIn();
         }
 
         IEnumerator EndDelay()
         {
-            if (!m_Gazing)
-                TurnOffStuff();
-            yield return null;
+            yield return FadeOut();
         }
 
-        void TurnOnStuff()
+        IEnumerator FadeIn()
         {
-            if (m_LazyTooltip != null)
-                m_LazyTooltip.gameObject.SetActive(true);
-            if (m_Curve != null)
-                m_Curve.SetActive(true);
+            float elapsedTime = 0f;
+            while (elapsedTime < m_FadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float alpha = Mathf.Clamp01(elapsedTime / m_FadeDuration);
+                if (m_TooltipCanvasGroup != null)
+                    m_TooltipCanvasGroup.alpha = alpha;
+                if (m_CurveCanvasGroup != null)
+                    m_CurveCanvasGroup.alpha = alpha;
+                yield return null;
+            }
         }
 
-        void TurnOffStuff()
+        IEnumerator FadeOut()
         {
-            if (m_LazyTooltip != null)
-                m_LazyTooltip.gameObject.SetActive(false);
-            if (m_Curve != null)
-                m_Curve.SetActive(false);
+            // Immediately return if the alpha values are already 0
+            if (m_TooltipCanvasGroup != null && m_TooltipCanvasGroup.alpha == 0f)
+            {
+                yield break; // No need to fade out if already at 0 alpha
+            }
+
+            float elapsedTime = 0f;
+
+            while (elapsedTime < m_FadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float alpha = 1f - Mathf.Clamp01(elapsedTime / m_FadeDuration);
+                if (m_TooltipCanvasGroup != null)
+                    m_TooltipCanvasGroup.alpha = alpha;
+                if (m_CurveCanvasGroup != null)
+                    m_CurveCanvasGroup.alpha = alpha;
+                yield return null;
+            }
         }
     }
 }

@@ -41,7 +41,6 @@ namespace DialogueEditor
             if (param != null)
             {
                 param.IntValue = value;
-                Debug.Log("Set Int: " + param.IntValue);
                 status = eParamStatus.OK;
             }
             else

@@ -10,6 +10,21 @@ public class SceneChanger : MonoBehaviour
     private Image fadeImage;
     private static SceneChanger instance;
 
+    public static SceneChanger Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                GameObject obj = new GameObject("SceneChanger");
+                instance = obj.AddComponent<SceneChanger>();
+                DontDestroyOnLoad(obj);
+                instance.CreateFadeCanvas();
+            }
+            return instance;
+        }
+    }
+
     private void Awake()
     {
         if (instance == null)
@@ -35,7 +50,7 @@ public class SceneChanger : MonoBehaviour
             fadeCanvas.planeDistance = 0.1f;
             fadeCanvas.sortingOrder = 1;
             DontDestroyOnLoad(fadeCanvas.gameObject);
-            
+
             fadeImage = new GameObject("FadeImage").AddComponent<Image>();
             fadeImage.transform.SetParent(fadeCanvas.transform, false);
             fadeImage.rectTransform.anchorMin = Vector2.zero;
@@ -45,22 +60,31 @@ public class SceneChanger : MonoBehaviour
         }
     }
 
-    public void ChangeScene()
+    public static void ChangeScene()
     {
-        StartCoroutine(FadeAndSwitchScene());
+        Instance.StartCoroutine(Instance.FadeAndSwitchScene());
     }
 
     private IEnumerator FadeAndSwitchScene()
     {
+        // Fade out before the scene loads
         yield return StartCoroutine(Fade(0f, 1f));
 
+        // Load the next scene asynchronously
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
 
+        // Fade in after the scene has loaded
         yield return StartCoroutine(Fade(1f, 0f));
+
+        // You do not need to destroy the fade canvas or the SceneChanger object,
+        // as the SceneChanger is supposed to persist between scenes
+        // No need for these lines:
+        // Destroy(fadeCanvas.gameObject);
+        // Destroy(gameObject);
     }
 
     private IEnumerator Fade(float startAlpha, float endAlpha)

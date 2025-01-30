@@ -3765,8 +3765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a75bf15e8f2fae43b09a6998927baed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation:
-  - {fileID: 0}
+  conversation: []
   launchOnStart: 1
 --- !u!4 &1575852306
 Transform:
@@ -4679,10 +4678,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2023693080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b46e9f92c489d41aff6b27e83873fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bec66be93b9c564a980dbd592110d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onLaunch:
+  onSelectedEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 528146782}
@@ -4692,18 +4691,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1575852305}
-        m_TargetAssemblyTypeName: TriggerConversation, Assembly-CSharp
-        m_MethodName: triggerConversation
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 437294956}
-          m_ObjectArgumentAssemblyTypeName: DialogueEditor.NPCConversation, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7088,6 +7075,9 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+  m_TargetPose:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &5833331298370860719
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7347,6 +7337,9 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+  m_TargetPose:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &6209474720765099437
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7637,6 +7630,9 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+  m_TargetPose:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &6639727517938502243
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8219,6 +8215,9 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+  m_TargetPose:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &7441337929015243784
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9301,6 +9300,9 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+  m_TargetPose:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &8461148302355902723
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9879,6 +9881,9 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+  m_TargetPose:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &8663258628222994606
 Rigidbody:
   m_ObjectHideFlags: 0
