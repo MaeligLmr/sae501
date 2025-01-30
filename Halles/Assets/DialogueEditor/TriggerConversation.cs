@@ -34,7 +34,7 @@ public class TriggerConversation : MonoBehaviour
         if (conversationQueue.Count > 0 && !ConversationManager.Instance.IsConversationActive)
         {
             NPCConversation nextConversation = conversationQueue.Dequeue();
-            ConversationManager.Instance.StartConversation(nextConversation);
+            ;
         }
     }
 
@@ -42,7 +42,7 @@ public class TriggerConversation : MonoBehaviour
     {
         if (conv != null)
         {
-            conversationQueue.Enqueue(conv);
+            ConversationManager.Instance.StartConversation(conv);
         }
     }
 
