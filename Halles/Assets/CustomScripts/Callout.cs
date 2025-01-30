@@ -66,6 +66,24 @@ namespace Unity.VRTemplate
             m_EndCo = StartCoroutine(EndDelay());
         }
 
+        public void ShowCallout()
+        {
+            if (m_StartCo != null)
+                StopCoroutine(m_StartCo);
+            if (m_EndCo != null)
+                StopCoroutine(m_EndCo);
+            m_StartCo = StartCoroutine(StartDelay());
+        }
+
+        public void HideCallout()
+        {
+            if (m_StartCo != null)
+                StopCoroutine(m_StartCo);
+            if (m_EndCo != null)
+                StopCoroutine(m_EndCo);
+            m_EndCo = StartCoroutine(EndDelay());
+        }
+
         IEnumerator StartDelay()
         {
             yield return new WaitForSeconds(m_DwellTime);
