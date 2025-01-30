@@ -24,7 +24,7 @@ Material:
     RenderType: Opaque
   disabledShaderPasses:
   - MOTIONVECTORS
-  m_LockedProperties: 
+  m_LockedProperties: _BaseMap
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
@@ -40,10 +40,10 @@ Material:
     - _SmoothnessTextureChannel: 1
     - _WorkflowMode: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.4339623, g: 0.42296702, b: 0.3954788, a: 1}
+    - _Color: {r: 0.43396226, g: 0.422967, b: 0.39547879, a: 1}
     - _EmissionColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _SpecColor: {r: 0.90943396, g: 0.90943396, b: 0.90943396, a: 1}
+    - _SpecColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8497417092370566500
